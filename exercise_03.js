@@ -42,3 +42,11 @@ let km = cm / 100000;
 console.log(`${km} Km`);
 
 // -----------------------------------------------------------//
+
+// Write a code to format number as currency (IDR) //
+
+let idr = 1000;
+let currency = idr.toLocaleString("id");
+let format = `Rp. ${currency},00`;
+
+console.log(format);
