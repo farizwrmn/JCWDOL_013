@@ -50,3 +50,7 @@ let currency = idr.toLocaleString("id");
 let format = `Rp. ${currency},00`;
 
 console.log(format);
+
+// ----------------------------------------------------------- //
+
+// Write a code to remove the first occurrence of a given "Search string" from a string //
