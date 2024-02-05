@@ -54,3 +54,16 @@ console.log(format);
 // ----------------------------------------------------------- //
 
 // Write a code to remove the first occurrence of a given "Search string" from a string //
+
+let str = "Hello World";
+str = str.replace("ell", "");
+
+console.log(`ell -> ${str} `);
+// -----------------------------------------------------------//
+
+// Write a code to capitalize the first letter of each word in a string //
+
+let abc = "hello World";
+let Abc = abc.charAt(0).toLocaleUpperCase() + abc.slice(1);
+
+console.log(Abc);
