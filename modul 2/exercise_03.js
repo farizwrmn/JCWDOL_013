@@ -104,15 +104,11 @@ let y = arr.sort();
 console.log(y);
 //---------------------------------------------------------------//
 
-// Write a code that shows 1 if the input is a string, 2 if the input is number and 3 for others data type //
-let input1 = "st";
-let dataStr = String;
-let dataNum = Number;
-let dataOth = Symbol;
+let input1 = 1;
 
-if (input1 == String) {
+if (typeof input1 == "string") {
   console.log(1);
-} else if ((input1 = Number)) {
+} else if (typeof input1 == "number") {
   console.log(2);
 } else {
   console.log(3);
