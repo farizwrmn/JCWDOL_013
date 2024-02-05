@@ -67,3 +67,53 @@ let abc = "hello World";
 let Abc = abc.charAt(0).toLocaleUpperCase() + abc.slice(1);
 
 console.log(Abc);
+//------------------------------------------------------------//
+
+// Write a code to reverse a string //
+
+const w = "hello";
+let x = w.split("");
+let b = x.reverse();
+let a = b.join("");
+
+console.log(`${w} -> ${a}`);
+// --------------------------------------------------------------//
+
+// Write a code to swap the case of each character from string //
+
+let W = "tHe QuIcK BrOwN FoX";
+W = W.replace("tHe QuIcK BrOwN FoX", "ThE qUiCk bRoWn fOx ");
+
+console.log(W);
+
+//---------------------------------------------------------------//
+
+// Write a code to find the largest of two given integers //
+
+let num1 = 42;
+let num2 = 27;
+let bigger = Math.max(num1, num2);
+
+console.log(bigger);
+//---------------------------------------------------------------//
+
+// Write a conditional statement to sort three numbers //
+let arr = [42, 27, 18];
+let y = arr.sort();
+
+console.log(y);
+//---------------------------------------------------------------//
+
+// Write a code that shows 1 if the input is a string, 2 if the input is number and 3 for others data type //
+let input1 = "st";
+let dataStr = String;
+let dataNum = Number;
+let dataOth = Symbol;
+
+if (input1 == String) {
+  console.log(1);
+} else if ((input1 = Number)) {
+  console.log(2);
+} else {
+  console.log(3);
+}
