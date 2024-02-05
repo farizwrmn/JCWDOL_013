@@ -104,6 +104,8 @@ let y = arr.sort();
 console.log(y);
 //---------------------------------------------------------------//
 
+// Write a code that shows 1 if the input is a string, 2 if the input is a number, and 3 for others data type.//
+
 let input1 = 1;
 
 if (typeof input1 == "string") {
@@ -113,3 +115,18 @@ if (typeof input1 == "string") {
 } else {
   console.log(3);
 }
+//------------------------------------------------------------------//
+
+// Write a code to change every letter a into * from a string of input //
+
+let letter = "An apple a day keeps the doctor away";
+let star = "";
+
+for (let i = 0; i < letter.length; i++) {
+  if (letter[i] == "a" || letter[i] == "A") {
+    star += "*";
+  } else {
+    star += letter[i];
+  }
+}
+console.log(star);
