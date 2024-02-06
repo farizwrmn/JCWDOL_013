@@ -1,97 +1,49 @@
-// --------EXERCISE-------- //
+// Exercise //
 
-// Konversi celsius ke fahrenheit //
-// Rumus (60ºC x 9) / 5 + 32 = 140ºF //
+// let rectLength = 5;
+// let rectWidth = 3;
+// let hasil = rectLength * rectWidth;
+// console.log(hasil);
 
-const c = 60;
-const f = (c * 9) / 5 + 32;
-console.log(f);
-// ---------Atau--------- //
-console.log((60 * 9) / 5 + 32 + "ºF");
-//------------------------------------------------//
+// let length = 5;
+// let width = 3;
+// let hasil1 = 2 * (length + width);
+// console.log(hasil1);
 
-// Even or Odd number checker //
-// Angka Genap jika di modulus (%) 2 = 0, Selain itu program akan menilai Angka sebagai Bilangan Ganjil, Membuat Variabel nomor yang akan di periksa dan memasukkan rumus di  //
+// let radius = 5;
+// let pi = 3.14;
 
-let noToCheck = 25;
+// let diameter = radius * 2;
+// console.log(diameter);
 
-if (noToCheck % 2 === 0) {
-  console.log(`${noToCheckoToCheck} Adalah bilangan Genap`);
-} else {
-  console.log(`${noToCheck} Adalah bilangan Ganjil`);
-}
+// let circum = 2 * pi * radius;
+// console.log(circum);
 
-//----------Atau--------- //
-const isEven = 2;
-const isOdd = isEven % 2 === 0;
+// let area = pi * Math.pow(radius, 2);
+// console.log(area);
 
-isOdd
-  ? console.log(`${isEven} Bilangan Genap`)
-  : console.log(`${isEven} Bilangan Ganjil`);
-// -------------------------------------------------- //
+let a = 80;
+let b = 65;
+let c = 180;
 
-// Prime number checker //
-// Bilangan primer adalah bilangan asli yang lebih dari 1 dan bukan hasil perkalian dari 2 bilangan asli yang lebih kecil //
+const hasiil = c - (a + b);
+console.log(hasiil);
 
-const n = (angka) => {
-  let pembagi = 0;
-  for (let i = 1; i <= angka; i++) {
-    if (angka % i == 0) {
-      pembagi++;
-    }
-  }
-  if (pembagi == 2) {
-    console.log("prima");
-  } else {
-    console.log("bukan prima");
-  }
-};
+let date1 = new Date("2022-01-20");
+let date2 = new Date("2022-01-22");
+let hasil = (date2 - date1) / (24 * 3600 * 1000);
 
-n(7); // prima
-// n(6); // bukan prima
-//--------------------------------------------------------//
+console.log(hasil);
 
-// Membuat code untuk pejumlahan angka dari 1 ke N //
-// contoh: 5 adalah 1 + 2 + 3 + 4 + 5 = 15 //
+const day = 400;
+const dayInYear = 365;
+const dayInMonth = 30;
+const dayInWeek = 7;
 
-const N = 5;
-let angka = 0;
-message = `${N} -> `;
+const year = (day / dayInYear).toFixed();
+const month = ((day % dayInYear) / dayInMonth).toFixed();
+const days = day - year * dayInYear - month * dayInMonth;
 
-for (let i = 1; i <= N; i++) {
-  angka += i;
-  message += i == N ? ` ${i} = ${angka}` : ` ${i} +`;
-}
+console.log(`${year} Tahun, ${month} Bulan, ${days} Hari`);
 
-console.log(message);
-//---------------------------------------------------------//
-
-// Mencari nomor faktorial //
-// Rumus: !5 = 5 * 4 * 3 * 2 * 1 = 120 //
-
-let factNo = 4;
-message = `factorial of ${factNo} = `;
-for (let i = factNo - 1; i >= 1; i--) {
-  factNo *= i;
-}
-message += `${factNo}`;
-console.log(message);
-
-// -------------------------------------------------------//
-
-// Menampilkan angka fibonacci N //
-// Contoh: 15 -> 610 //
-
-calc = 0;
-numberN = 15;
-let number1 = 0;
-let number2 = 1;
-message = `First ${numberN} of fibonacci = ${number1}, `;
-
-for (let i = 1; i <= numberN; i++) {
-  calc = number1 + number2;
-  number1 = number2;
-  number2 = calc;
-  message += i == 1 ? `${number1}` : `, ${number1}`;
-}
-console.log(message);
+//----------------------------------------------------------------------------------//

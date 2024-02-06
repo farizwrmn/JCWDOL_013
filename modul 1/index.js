@@ -54,53 +54,6 @@
 
 // console.log(x === w);
 
-// Exercise //
-// let rectLength = 5;
-// let rectWidth = 3;
-// let hasil = rectLength * rectWidth;
-// console.log(hasil);
-
-// let length = 5;
-// let width = 3;
-// let hasil1 = 2 * (length + width);
-// console.log(hasil1);
-
-// let radius = 5;
-// let pi = 3.14;
-
-// let diameter = radius * 2;
-// console.log(diameter);
-
-// let circum = 2 * pi * radius;
-// console.log(circum);
-
-// let area = pi * Math.pow(radius, 2);
-// console.log(area);
-
-// let a = 80;
-// let b = 65;
-// let c = 180;
-
-// const hasiil = c - (a + b);
-// console.log(hasiil);
-
-// let date1 = new Date("2022-01-20");
-// let date2 = new Date("2022-01-22");
-// let hasil = (date2 - date1) / (24 * 3600 * 1000);
-
-// console.log(hasil);
-
-// const day = parseInt(prompt("Masukkan berapa Hari"));
-// const dayInYear = 365;
-// const dayInMonth = 30;
-// const dayInWeek = 7;
-
-// const year = (day / dayInYear).toFixed();
-// const month = ((day % dayInYear) / dayInMonth).toFixed();
-// const days = day - year * dayInYear - month * dayInMonth;
-
-// alert(`${year} Tahun, ${month} Bulan, ${days} Hari`);
-
 // let y = 17;
 // if (y <= 16) {
 //   console.log("Anda belum cukup umur");
@@ -172,15 +125,29 @@
 
 // CURRYING //
 
-function multiplierCur(factor) {
-  return function (number) {
-    return function (number2) {
-      return number * factor * number2;
-    };
-  };
-}
-const data = multiplierCur(5);
-const result1 = data(3);
+// function multiplierCur(factor) {
+//   return function (number) {
+//     return function (number2) {
+//       return number * factor * number2;
+//     };
+//   };
+// }
+// const data = multiplierCur(5);
+// const result1 = data(3);
 
-console.log(result1(1));
-console.log(multiplierCur(3)(3)(2));
+// console.log(result1(1));
+// console.log(multiplierCur(3)(3)(2));
+
+// ARROW FUNCTION //
+
+// const pengurangan = (a, b) => {
+//   return a - b;
+// };
+
+// console.log(pengurangan(4, 2));
+
+// //-----------------------------------//
+
+// const pertambahan = (a, b) => a + b;
+
+// console.log(pertambahan(3, 3));

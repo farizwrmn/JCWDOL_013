@@ -119,14 +119,14 @@ if (typeof input1 == "string") {
 
 // Write a code to change every letter a into * from a string of input //
 
-let letter = "An apple a day keeps the doctor away";
-let star = "";
+// let letter = "An apple a day keeps the doctor away";
+// let star = "";
 
-for (let i = 0; i < letter.length; i++) {
-  if (letter[i] == "a" || letter[i] == "A") {
-    star += "*";
-  } else {
-    star += letter[i];
-  }
-}
-console.log(star);
+// for (let i = 0; i < letter.length; i++) {
+//   if (letter[i] == "a" || letter[i] == "A") {
+//     star += "*";
+//   } else {
+//     star += letter[i];
+//   }
+// }
+// console.log(star);
