@@ -142,3 +142,45 @@
 // ];
 // const removed = name.pop();
 // console.log(removed);
+
+// NESTED FUNCTION //
+
+// function getMessage(firstName) {
+//   function sayHello() {
+//     return `Hello ${firstName}, `;
+//   }
+//   function welcomeMessage() {
+//     return "welcome to Purwadhika!.";
+//   }
+//   return sayHello() + welcomeMessage();
+// }
+
+// console.log(getMessage(123));
+
+// CLOSURE //
+
+// function greeting(name) {
+//     const defaultMessage = 'Hello ';
+
+//     return function() {
+//         return defaultMessage + name;
+//     };
+// }
+// const result = greeting("Budi");
+// console.log(result());
+// console.log(greeting("Dodo")());
+
+// CURRYING //
+
+function multiplierCur(factor) {
+  return function (number) {
+    return function (number2) {
+      return number * factor * number2;
+    };
+  };
+}
+const data = multiplierCur(5);
+const result1 = data(3);
+
+console.log(result1(1));
+console.log(multiplierCur(3)(3)(2));
