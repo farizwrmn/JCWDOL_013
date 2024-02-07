@@ -151,3 +151,15 @@
 // const pertambahan = (a, b) => a + b;
 
 // console.log(pertambahan(3, 3));
+//---------------------------------------//
+
+// var isPalindrome = function (x) {
+//   let name = x.toString();
+//   for (var i = 0; i < name.length / 2; i++) {
+//     if (name.charAt(i) != name.charAt(name.length - 1 - i)) {
+//       return false;
+//     }
+//   }
+//   return true;
+// };
+// console.log(isPalindrome("madam"));

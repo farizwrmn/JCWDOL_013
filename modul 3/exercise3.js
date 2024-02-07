@@ -21,7 +21,7 @@ console.log(
 
 //-----atau-----//
 
-let kata = "soto";
+let kata = "101";
 let reversed = "";
 
 for (let i = kata.length - 1; i >= 0; i--) {
