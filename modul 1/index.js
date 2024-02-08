@@ -163,3 +163,31 @@
 //   return true;
 // };
 // console.log(isPalindrome("madam"));
+
+// class User {
+//   name = "budi";
+//   greeting() {
+//     return "Hello World";
+//   }
+// }
+
+// const user = new User();
+// console.log(user.greeting())
+
+// Array.prototype.last = function () {
+//   if (this.length === 0) {
+//     return -1;
+//   } else {
+//     return this[this.length - 1];
+//   }
+// };
+
+// const arr = [null];
+// console.log(arr.last()); // 3
+
+var romanToInt = function (s) {
+  let ans = 0;
+  return s * ans;
+};
+
+console.log(romanToInt());
