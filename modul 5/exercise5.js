@@ -18,3 +18,23 @@ function Arr(max) {
 
 console.log(Arr([12, 5, 23, 18, 4, 45, 32]));
 //----------------------------------------------------------------------------------------------//
+
+// Write a function that takes an array of words and returns a string by concat, separate with commas "and" the last word //
+// Contoh : arr = ["apple", "banana", "cherry", "date"] -> "apple, banana, cherry, and date"
+
+function arr([...string]) {
+  let last = string.pop();
+  return string + ", and " + last;
+}
+
+console.log(arr(["apple", "banana", "cherry", "date"]));
+//-----------------------------------------------------//
+
+// Write a function to split a string and convert it into an array of words //
+// contoh : "Hello World" -> ["Hello", "World"]
+
+function a(newArr) {
+  let b = newArr.split(" ");
+  return b;
+}
+console.log(a("Hello World"));
