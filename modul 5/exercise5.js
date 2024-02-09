@@ -38,3 +38,49 @@ function a(newArr) {
   return b;
 }
 console.log(a("Hello World"));
+//---------------------------------------------------//
+
+// Write a function to calculate each element in the same position from two arrays of integer. Assume both arrays are of the same length.
+// contoh : [1, 2, 3] + [3, 2, 1] -> [4, 4, 4]
+const Arr1 = [1, 2, 3];
+const Arr2 = [3, 2, 1];
+
+let sum = Arr1.map(function (angka, angka1) {
+  return angka + Arr2[angka1];
+});
+
+console.log(sum);
+//-----------------------------------------------------//
+
+// Write a function that adds an element to the end of an array. However, the element should only be added if it is not already in the array.
+// contoh : arr = [1, 2, 3, 4], newElement = 7 -> [1, 2, 3, 4, 7]
+
+function addArr(Arr3, num) {
+  if (!Arr3.includes(num)) {
+    Arr3.push(num);
+  }
+  return Arr3;
+}
+
+const Arr3 = [1, 2, 3, 4];
+const element = 7;
+
+console.log(addArr(Arr3, element));
+//-------------------------------------------------------//
+
+// Write a function to remove all odds numbers in array and return even only number new array //
+// contoh = 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 -> 2,4,6,8,10 //
+
+const b = function (angka3 = []) {
+  return angka3.filter(function (angka3) {
+    return angka3 % 2 === 0;
+  });
+};
+console.log(b([1, 2, 3, 4, 5, 6]));
+//------------------------------------------------------//
+
+// Write a function to insert multiple given integer (not an array) to an array and have a maximum size input. The array can only have a maximum size from a given input. (if the maximum size of the given input is 5 than the array can only contain 5 elements) //
+// Contoh : maxSize = 5, given integers is 5, 10, 24, 3, 6, 7, 8
+// The function will return [5, 10, 24, 3, 6]
+
+function maxSize() {}
