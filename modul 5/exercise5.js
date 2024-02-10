@@ -126,14 +126,12 @@ function dif(data, data1) {
   for (i of data) {
     if (!removed.includes(i) && !data1.includes(i)) {
       removed.push(i);
-      console.log(i);
     }
   }
   for (i of data1) {
     if (!removed.includes(i) && !data.includes(i)) {
       removed.push(i);
     }
-    console.log(i);
   }
   return removed;
 }
