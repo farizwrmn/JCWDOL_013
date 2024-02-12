@@ -49,3 +49,42 @@ function dupl(sum) {
 const Arr = [10, 20, 40, 10, 50, 30, 10, 60, 10];
 console.log(dupl(Arr));
 //----------------------------------------------------------------//
+
+// Write a game of rock, paper, scissor function that will return "Win" or "Lose" //
+/* rock > scissor = Win,          scissor > paper   = Win,           paper > rock     = Win.
+   rock < paper   = Lose,         scissor < rock    = Lose,          paper < scissor  = Lose.
+   rock = rock    = Draw ,        scissor = scissor = Draw,          paper = paper    = Draw.
+   */
+
+let computer;
+let result;
+
+function comp() {
+  let rand = Math.ceil(Math.random() * 3);
+
+  if (rand == 1) {
+    computer = "Kertas";
+  } else if (rand == 2) {
+    computer = "Batu";
+  } else {
+    computer = "Gunting";
+  }
+  return computer;
+}
+
+function winner() {
+  if (player == computer) {
+    return (result = "DRAW");
+  } else if (computer == "Batu") {
+    return (result = player == "Kertas" ? "WIN" : "LOSE");
+  } else if (computer == "Kertas") {
+    return (result = player == "Gunting" ? "WIN" : "LOSE");
+  } else if (computer == "Gunting") {
+    return (result = player == "Batu" ? "WIN" : "LOSE");
+  }
+}
+
+let player = "Batu";
+console.log(comp());
+console.log(player);
+console.log(winner());
