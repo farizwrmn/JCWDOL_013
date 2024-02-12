@@ -191,3 +191,40 @@
 // };
 
 // console.log(romanToInt());
+
+let person = {
+  nama: "fariz",
+  umur: 28,
+  alamatLengkap: {
+    domisili: "Ciputat",
+    asal: "Jakarta",
+  },
+  pendidikan: "S1",
+};
+
+console.log(person);
+
+for (key in person) {
+  console.log(person[key]);
+}
+
+const orang = {
+  firstName: "Fariz",
+  lastName: "Warman",
+  umur: 21,
+
+  get fullName() {
+    return `${this.firstName} ${this.lastName}`;
+  },
+
+  set fullName(value) {
+    const split = value.split(" ");
+    this.firstName = split[0];
+    this.lastName = split[1];
+  },
+};
+
+console.log(orang.fullName);
+
+orang.fullName = "Anies Baswedan";
+console.log(orang.fullName);
