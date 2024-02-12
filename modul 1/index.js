@@ -228,3 +228,30 @@ console.log(orang.fullName);
 
 orang.fullName = "Anies Baswedan";
 console.log(orang.fullName);
+
+class User {
+  nama;
+  namaLengkap;
+
+  constructor(nama, namaLengkap) {
+    this.nama = nama;
+    this.namaLengkap = namaLengkap;
+  }
+
+  greetings() {
+    return "Hello World";
+  }
+}
+
+const User1 = class {
+  nama = "Laras";
+  greetings() {
+    return "Hello World";
+  }
+};
+
+const user = new User("Fariz", "Warman");
+console.log(user.nama, user.namaLengkap);
+
+const user1 = new User1();
+console.log(user1.greetings());

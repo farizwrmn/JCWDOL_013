@@ -1,16 +1,15 @@
 // Write a function that will return primitive data types only
 // Contoh : arr = [1, [], undefined, {}, "string", {}, []]; -> [1, undefined, "string"]
 
-function a(primitive) {
-  let order = primitive.sort();
-  let re = order.slice(5);
-  let hasil = re.unshift(1);
+const primitve = function (arr) {
+  let res = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (typeof arr[i] !== "object" || arr[i] === null) res.push(arr[i]);
+  }
+  return res;
+};
 
-  return re;
-}
-
-const arr = [1, [], undefined, {}, "string", {}, []];
-console.log(a(arr));
+console.log(primitve([1, [], undefined, "String", null, true]));
 //----------------------------------------------------//
 
 // Write a function to return the second smallest number //
