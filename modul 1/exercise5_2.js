@@ -84,7 +84,8 @@ function winner() {
   }
 }
 
-let player = "Batu";
-console.log(comp());
+let player = "Kertas";
 console.log(player);
+
+console.log(comp());
 console.log(winner());
