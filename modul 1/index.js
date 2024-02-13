@@ -255,3 +255,22 @@ console.log(user.nama, user.namaLengkap);
 
 const user1 = new User1();
 console.log(user1.greetings());
+//--------------------------------------------------------//
+
+class a {
+  nama = "Fariz";
+  kelas;
+  umur;
+
+  constructor(kelas, umur) {
+    this.kelas = kelas;
+    this.umur = umur;
+  }
+
+  greeting() {
+    return `Hello world`;
+  }
+}
+
+const b = new a(12);
+console.log(b);
