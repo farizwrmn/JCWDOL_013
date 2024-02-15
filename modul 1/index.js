@@ -192,85 +192,126 @@
 
 // console.log(romanToInt());
 
-let person = {
-  nama: "fariz",
-  umur: 28,
-  alamatLengkap: {
-    domisili: "Ciputat",
-    asal: "Jakarta",
-  },
-  pendidikan: "S1",
+// let person = {
+//   nama: "fariz",
+//   umur: 28,
+//   alamatLengkap: {
+//     domisili: "Ciputat",
+//     asal: "Jakarta",
+//   },
+//   pendidikan: "S1",
+// };
+
+// console.log(person);
+
+// for (key in person) {
+//   console.log(person[key]);
+// }
+
+// const orang = {
+//   firstName: "Fariz",
+//   lastName: "Warman",
+//   umur: 21,
+
+//   get fullName() {
+//     return `${this.firstName} ${this.lastName}`;
+//   },
+
+//   set fullName(value) {
+//     const split = value.split(" ");
+//     this.firstName = split[0];
+//     this.lastName = split[1];
+//   },
+// };
+
+// console.log(orang.fullName);
+
+// orang.fullName = "Anies Baswedan";
+// console.log(orang.fullName);
+
+// class User {
+//   nama;
+//   namaLengkap;
+
+//   constructor(nama, namaLengkap) {
+//     this.nama = nama;
+//     this.namaLengkap = namaLengkap;
+//   }
+
+//   greetings() {
+//     return "Hello World";
+//   }
+// }
+
+// const User1 = class {
+//   nama = "Laras";
+//   greetings() {
+//     return "Hello World";
+//   }
+// };
+
+// const user = new User("Fariz", "Warman");
+// console.log(user.nama, user.namaLengkap);
+
+// const user1 = new User1();
+// console.log(user1.greetings());
+// //--------------------------------------------------------//
+
+// class a {
+//   nama = "Fariz";
+//   kelas;
+//   umur;
+
+//   constructor(kelas, umur) {
+//     this.kelas = kelas;
+//     this.umur = umur;
+//   }
+
+//   greeting() {
+//     return `Hello world`;
+//   }
+// }
+
+// const b = new a(12);
+// console.log(b);
+
+// class stack {
+//     #maxSize;
+//     #container = [];
+//     constructor(maxSize = 10) {
+//         this.maxSize = maxSize;
+//     }
+
+//     push (element) {
+
+//     }
+
+//     pop() {
+
+//     }
+
+//     getElement() {
+
+//     }
+// }
+
+// Single Linked //
+var mergeTwoLists = function (list1, list2) {
+  if (!list1) {
+    return list2;
+  }
+  if (!list2) {
+    return list1;
+  }
+  if (list1.val < list2.val) {
+    list1.next = mergeTwoLists(list1.next, list2);
+    return list1;
+  } else {
+    list2.next = mergeTwoLists(list1, list2.next);
+    return list2;
+  }
 };
 
-console.log(person);
-
-for (key in person) {
-  console.log(person[key]);
-}
-
-const orang = {
-  firstName: "Fariz",
-  lastName: "Warman",
-  umur: 21,
-
-  get fullName() {
-    return `${this.firstName} ${this.lastName}`;
-  },
-
-  set fullName(value) {
-    const split = value.split(" ");
-    this.firstName = split[0];
-    this.lastName = split[1];
-  },
-};
-
-console.log(orang.fullName);
-
-orang.fullName = "Anies Baswedan";
-console.log(orang.fullName);
-
-class User {
-  nama;
-  namaLengkap;
-
-  constructor(nama, namaLengkap) {
-    this.nama = nama;
-    this.namaLengkap = namaLengkap;
-  }
-
-  greetings() {
-    return "Hello World";
-  }
-}
-
-const User1 = class {
-  nama = "Laras";
-  greetings() {
-    return "Hello World";
-  }
-};
-
-const user = new User("Fariz", "Warman");
-console.log(user.nama, user.namaLengkap);
-
-const user1 = new User1();
-console.log(user1.greetings());
-//--------------------------------------------------------//
-
-class a {
-  nama = "Fariz";
-  kelas;
-  umur;
-
-  constructor(kelas, umur) {
-    this.kelas = kelas;
-    this.umur = umur;
-  }
-
-  greeting() {
-    return `Hello world`;
-  }
-}
-
-const b = new a(12);
-console.log(b);
+const num1 = [1, 2, 4];
+const num2 = [1, 3, 4];
+console.log(mergeTwoLists(num1, num2));
