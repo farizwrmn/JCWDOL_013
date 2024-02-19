@@ -296,22 +296,189 @@
 // }
 
 // Single Linked //
-var mergeTwoLists = function (list1, list2) {
-  if (!list1) {
-    return list2;
+// var mergeTwoLists = function (list1, list2) {
+//   if (!list1) {
+//     return list2;
+//   }
+//   if (!list2) {
+//     return list1;
+//   }
+//   if (list1.val < list2.val) {
+//     list1.next = mergeTwoLists(list1.next, list2);
+//     return list1;
+//   } else {
+//     list2.next = mergeTwoLists(list1, list2.next);
+//     return list2;
+//   }
+// };
+
+// const num1 = [1, 2, 4];
+// const num2 = [1, 3, 4];
+// console.log(mergeTwoLists(num1, num2));
+
+// var filter = function (arr, fn) {
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] > 10) {
+//       return arr[i];
+//     }
+//   }
+// };
+
+// const greaterThan = function (n) {
+//   return n > 10;
+// };
+
+// const ray = [0, 10, 20, 30];
+// const newArray = filter(ray, greaterThan());
+// console.log(newArray);
+
+///////////////////////////////
+// Function switch //////////////////
+
+// var numbers = [1, 2, 3];
+
+// const arrCalculator = (arr, operation, operand) => {
+//   let arrRes = [];
+//   switch (operation) {
+//     case "addition":
+//       for (let i = 0; i < arr.length; i++) {
+//         arrRes.push(arr[i] + operand);
+//       }
+//       break;
+
+//     case "multiplication":
+//       for (let i = 0; i < arr.length; i++) {
+//         arrRes.push(arr[i] * operand);
+//       }
+//       break;
+//   }
+//   return arrRes;
+// };
+
+// console.log(arrCalculator(numbers, "multiplication", 2));
+
+///////////////////////////////
+// Function pangkat //////////////////
+
+const power = (num1, num2 = 2) => {
+  let result = num1;
+  for (let i = 1; i < num2; i++) {
+    result *= num1;
   }
-  if (!list2) {
-    return list1;
-  }
-  if (list1.val < list2.val) {
-    list1.next = mergeTwoLists(list1.next, list2);
-    return list1;
-  } else {
-    list2.next = mergeTwoLists(list1, list2.next);
-    return list2;
+  return result;
+};
+
+console.log(power(8, 3));
+
+///////////////////////////////
+// CALLBACK //////////////////
+
+let addition = (num1, num2) => {
+  return num1 + num2;
+};
+let multiplication = (num1, num2) => {
+  return num1 * num2;
+};
+
+let result = (a, cb, b) => {
+  return cb(a, b);
+};
+
+console.log(result(9, multiplication, 7));
+
+///////////////////////////////
+// Counter & call inside funct //////////////////
+
+var countDown = (counter) => {
+  console.log(counter);
+  counter--;
+  if (counter >= 0) {
+    countDown(counter);
   }
 };
 
-const num1 = [1, 2, 4];
-const num2 = [1, 3, 4];
-console.log(mergeTwoLists(num1, num2));
+console.log(countDown(10));
+
+///////////////////////////////////////////////
+/// ADD SUM + 1 ARRAY /////////////////////////
+let arr1 = [1, 2, 3];
+
+var map = function (arr, fn) {
+  const res = [];
+  for (let i = 0; i < arr.length; i++) {
+    res.push(fn(arr[i], i));
+  }
+  return res;
+};
+
+plusone = (n) => {
+  return n + 1;
+};
+
+const res = map(arr1, plusone);
+console.log(res);
+////////////////////////////////////////////////
+/// ONE FUNCTION CALL /////////////////////////
+
+var once = function (fn) {
+  let called = false;
+  let result;
+
+  return function (...args) {
+    if (!called) {
+      result = fn(...args);
+      called = true;
+      return result;
+    } else {
+      return undefined;
+    }
+  };
+};
+
+const arrr = (a, b, c) => a + b + c;
+const one = once(arrr);
+
+console.log(one(1, 2, 3));
+console.log(one(1, 2, 3));
+////////////////////////////////////////////////
+/// Counter ///////////////////////////////////
+const nom = 5;
+
+function createCounter(init) {
+  let counter = init;
+  function increment() {
+    return ++counter;
+  }
+  function decrement() {
+    return --counter;
+  }
+  function reset() {
+    return (counter = init);
+  }
+  return { increment, decrement, reset };
+}
+
+const counter = createCounter(nom);
+console.log(counter.increment());
+console.log(counter.increment());
+console.log(counter.reset());
+console.log(counter.decrement());
+/////////////////////////////////////////////////
+//// Number reverse ////////////////////////////
+var reverse = function (x) {
+  let bit = Math.pow(2, 31) - 1;
+  let rev = x.toString().split("").reverse().join("");
+  let result = parseInt(rev);
+  if (result > bit || result < -bit) {
+    return 0;
+  }
+  if (x < 0) {
+    return -result;
+  } else {
+    return result;
+  }
+};
+
+const abc = -123;
+console.log(reverse(-123));
+/////////////////////////////////////////////////
