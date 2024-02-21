@@ -482,3 +482,183 @@ var reverse = function (x) {
 const abc = -123;
 console.log(reverse(-123));
 /////////////////////////////////////////////////
+//// FOR EACH, BISA MENERIMA HINGGA 3 ARGUMEN////
+
+const day = ["monday", "tuesday", "friday"];
+
+day.forEach((val, index, arr) => {
+  console.log(`Direct index ${index} : ${val} arr ${arr}`);
+});
+
+const num = [2, 5, 7];
+const resu = [];
+
+num.forEach((val) => {
+  return resu.push(val * 2);
+});
+
+console.log(resu);
+
+const nums = [39, 101, 1, 5, 25, 13];
+var min, max;
+nums.forEach((val, idx) => {
+  if (idx === 0) {
+    min = max = val;
+  } else if (val < min) {
+    min = val;
+  } else if (val > max) {
+    max = val;
+  }
+});
+
+console.log(min, max);
+
+const numb = [11, 22, 34, 41, 52, 63, 71, 86];
+
+const numbs = (numbers) => {
+  let odd = [];
+  let even = [];
+
+  numb.forEach((number) => {
+    if (number % 2 == 0) {
+      even.push(number);
+    } else {
+      odd.push(number);
+    }
+  });
+  return [odd, even];
+};
+
+console.log(numbs(numb));
+
+const nomor = [1, 2, 3];
+const rezult = [];
+
+nomor.forEach((val) => {
+  rezult.push(val * 2);
+});
+
+console.log(rezult);
+
+///////////////////////////////////////////////////////////////////////
+//// MAP function ////////////////////////////////////////////////////
+
+const nomor1 = [1, 2, 3];
+
+var mapResult = nomor1.map((number) => {
+  return number * 2;
+});
+
+console.log(mapResult);
+
+const ars = [1, 2, 3, 4];
+
+const evenOdd = (number) => {
+  var hasil = number.map((val) => {
+    if (val % 2 === 0) {
+      return [val, "Genap"];
+    } else {
+      return [val, "Ganjil"];
+    }
+  });
+  return hasil;
+};
+
+console.log(evenOdd(ars));
+
+const multi = (number, cb) => {
+  let arrMap = [];
+  // for (let i = 0; i < number.length; i++) {
+  //   arrMap.push(cb(number[i]));
+  // }
+  // return arrMap;
+
+  //////////////////////////////
+  //menggunakan forEach ////////
+  number.forEach((val) => {
+    arrMap.push(cb(val));
+  });
+  return arrMap;
+};
+
+const mult = (number) => {
+  return number * 2;
+};
+
+const forLoop = multi(ars, mult);
+console.log(forLoop);
+
+////////////////////////////////////////////////
+/////// Filter ////////////////////////////////
+
+var numbers = [1, 2, 3, 4, 5];
+
+var resFil = numbers.filter((number) => {
+  return number % 2 == 1;
+});
+
+console.log(resFil);
+/* ----------------------------------------- */
+var words = ["Koro Sensei", "Jin Mori", "Eren", "Tanjirou", "Zorro"];
+
+let length = words.filter((word) => {
+  return word.length <= 5;
+});
+
+console.log(length);
+/* ----------------------------------------- */
+
+var data = [
+  ["John", 43, "Jakarta"],
+  ["Baby", 21, "Jakarta"],
+  ["Tony", 34, "Surabaya"],
+  ["Justin", 29, "Banjarmasin"],
+];
+
+var datFil1 = (persons) => {
+  let resu = [];
+  let resuX = [];
+  persons.filter((data) => {
+    if (data[1] >= 30 || data[2] == "Jakarta") {
+      return resu.push(data);
+    } else {
+      return resuX.push(data);
+    }
+  });
+  return resu;
+};
+
+console.log(datFil1(data));
+/* ----------------------------------------- */
+///// Filter manual ////////
+var filterLoop = (arr, cb) => {
+  var arrLoop = [];
+  for (let i = 0; i < arr.length; i++) {
+    var isTrue = cb(arr[i]);
+    if (isTrue) {
+      arrLoop.push(arr[i]);
+    }
+  }
+  return arrLoop;
+};
+
+var numbss = [1, 23, 31, 20, 48];
+var odd = (val) => {
+  return val % 2 == 1;
+};
+
+console.log(filterLoop(numbss, odd));
+/* ----------------------------------------- */
+
+var forEachLoop = (arr, cb) => {
+  var result = [];
+  arr.forEach((val) => {
+    if (cb(val)) {
+      result.push(val);
+    }
+  });
+  return result;
+};
+
+console.log(forEachLoop(numbss, odd));
+/* ----------------------------------------- */
