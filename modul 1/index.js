@@ -662,3 +662,97 @@ var forEachLoop = (arr, cb) => {
 
 console.log(forEachLoop(numbss, odd));
 /* ----------------------------------------- */
+const captain = {
+  name: "Kuroky",
+  pets: ["cats", "fox", "bird"],
+  active: true,
+  height: 170,
+  play: function (game) {
+    console.log(`Playing ${game}`);
+  },
+};
+
+console.log(captain.play("pubg"));
+captain.nationality = "Indonesia";
+console.log(captain);
+
+const { name, pets } = captain;
+console.log(`my name is ${name} and i have ${pets.length} pets`);
+
+const capitan = new Object();
+capitan.name = "Fariz";
+capitan.age = 28;
+capitan["Pets"] = ["Ciro", "Polly"];
+capitan.play = function play(game) {
+  return `playing ${game}`;
+};
+console.log(capitan);
+console.log(capitan.play("Dota"));
+/*----------------------------------------------------------------------------------------------*/
+/// Leetcode - Nested array Generator ////
+let inorderTraversal = function* (arr) {
+  function* traverse(node) {
+    if (Array.isArray(node)) {
+      for (let subArray of node) {
+        yield* traverse(subArray);
+      }
+    } else {
+      yield node;
+    }
+  }
+  yield* traverse(arr);
+};
+
+const gen = inorderTraversal([6, [1, 3]]);
+console.log(gen.next().value);
+console.log(gen.next().value);
+console.log(gen.next().value);
+console.log(gen.next().done);
+/*----------------------------------------------------------------------------------------------*/
+/// PROMISE ////
+const tryPromise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    const success = true;
+    if (success) {
+      resolve("Success");
+    } else {
+      reject("error");
+    }
+  }, 2000);
+});
+
+tryPromise
+  .then((res) => console.log(res))
+  .catch((err) => console.log(err))
+  .finally(() => console.log("finally done"));
+/* ------------------------------------------------------ */
+
+let sepatu = {
+  merek: "adidas",
+  tipe: "Air Jordan",
+  ukuran: 42,
+};
+
+let listSepatu = [
+  {
+    merek: "adidas",
+    tipe: "air Joran",
+    ukuran: 42,
+  },
+  {
+    merek: "adidas",
+    tipe: "air jordan",
+    ukuran: 39,
+  },
+];
+
+console.log(listSepatu);
+console.log(sepatu);
+//
+const sepokat = new Object();
+sepokat.brand = "Kompas";
+sepokat.ukuran = 39;
+sepokat.fungsi = function () {
+  return "berjalan";
+};
+console.log(sepokat.fungsi());
