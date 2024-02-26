@@ -3,9 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>alert n prompt</title>
+    <title>DOM</title>
   </head>
   <body>
-    <script src="../modul 4/exercise4.js"></script>
+    <h1 id="myElement">Original Text</h1>
+    <button onclick="updateText()">Update Text</button>
+    <br />
+    <button onclick="addListener()">add listener</button>
+    <button id="myButton">Alert</button>
+    <div id="konten1">
+      <h1 id="title1">Ini adalah Create Element</h1>
+      <p id="des1">akan menambahkan Konten Baru</p>
+    </div>
+    <button onclick="newElement()">Create heading</button>
+    <button onclick="removeElement()">Create heading</button>
+    <script>
+      function addListener() {
+        const element = document.getElementById("myButton");
+        element.addEventListener("click", function () {
+          alert("Button diclick");
+        });
+      }
+      function updateText() {
+        const element = document.getElementById("myElement");
+        element.innerText = "Updated Text";
+      }
+      function newElement() {
+        const element1 = document.getElementById("konten1");
+        element1.textContent = "this is new paragraph";
+      }
+    </script>
   </body>
 </html>
